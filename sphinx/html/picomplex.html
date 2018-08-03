@@ -1,0 +1,3122 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>picomplex module &mdash; pairinteraction 0.9.1-alpha-45-g0b87795 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="pireal module" href="pireal.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pairinteraction
+          
+
+          
+            
+            <img src="_static/logo48x48.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9.1-alpha-45-g0b87795
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">2. Tutorials</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Indices and Tables</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pireal.html">pireal module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">picomplex module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+<style>
+a.button {
+  display: block;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 85px;
+  padding-right: 0px;
+  margin: 22px;
+  width: 240px;
+  height: 60px;
+  background: transparent url(buttons/github.svg) 0 0 no-repeat;
+}
+a.button small {
+  display: block;
+  font-size: 11px;
+}
+</style>
+<a href="https://github.com/pairinteraction/pairinteraction/releases" class="button">Download<small>pairinteraction on GitHub</small></a>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pairinteraction</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+        
+      <li>picomplex module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/picomplex.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-picomplex">
+<span id="picomplex-module"></span><h1>picomplex module<a class="headerlink" href="#module-picomplex" title="Permalink to this headline">¶</a></h1>
+<p>Backend for complex matrices</p>
+<dl class="function">
+<dt id="picomplex.HypergeometricU">
+<code class="descclassname">picomplex.</code><code class="descname">HypergeometricU</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>z</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#HypergeometricU"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.HypergeometricU" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> (<em>double</em>) &#8211; </li>
+<li><strong>b</strong> (<em>double</em>) &#8211; </li>
+<li><strong>z</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.MatrixElementCache">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">MatrixElementCache</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; MatrixElementCache<a class="reference internal" href="_modules/picomplex.html#MatrixElementCache"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>__init__(self, cachedir) -&gt; MatrixElementCache</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cachedir</strong> (<em>std::string const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.getDiamagnetism">
+<code class="descname">getDiamagnetism</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em>, <em>k</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.getDiamagnetism"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.getDiamagnetism" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>k</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.getElectricDipole">
+<code class="descname">getElectricDipole</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.getElectricDipole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.getElectricDipole" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.getElectricMultipole">
+<code class="descname">getElectricMultipole</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em>, <em>k</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.getElectricMultipole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.getElectricMultipole" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>k</strong> (<em>int</em>) &#8211; </li>
+<li><strong>state_row, state_col, kappa_radial, kappa_angular) -&gt; double</strong> (<em>getElectricMultipole(self,</em>) &#8211; </li>
+<li><strong>state_row</strong> &#8211; </li>
+<li><strong>state_col</strong> &#8211; </li>
+<li><strong>kappa_radial</strong> (<em>int</em>) &#8211; </li>
+<li><strong>kappa_angular</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.getMagneticDipole">
+<code class="descname">getMagneticDipole</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.getMagneticDipole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.getMagneticDipole" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.getRadial">
+<code class="descname">getRadial</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em>, <em>kappa</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.getRadial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.getRadial" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>kappa</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.precalculateDiamagnetism">
+<code class="descname">precalculateDiamagnetism</code><span class="sig-paren">(</span><em>self</em>, <em>basis_one</em>, <em>k</em>, <em>q</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.precalculateDiamagnetism"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.precalculateDiamagnetism" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>basis_one</strong> (<em>std::vector&lt; StateOne,std::allocator&lt; StateOne &gt; &gt; const &amp;</em>) &#8211; </li>
+<li><strong>k</strong> (<em>int</em>) &#8211; </li>
+<li><strong>q</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.precalculateElectricMomentum">
+<code class="descname">precalculateElectricMomentum</code><span class="sig-paren">(</span><em>self</em>, <em>basis_one</em>, <em>q</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.precalculateElectricMomentum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.precalculateElectricMomentum" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>basis_one</strong> (<em>std::vector&lt; StateOne,std::allocator&lt; StateOne &gt; &gt; const &amp;</em>) &#8211; </li>
+<li><strong>q</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.precalculateMagneticMomentum">
+<code class="descname">precalculateMagneticMomentum</code><span class="sig-paren">(</span><em>self</em>, <em>basis_one</em>, <em>q</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.precalculateMagneticMomentum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.precalculateMagneticMomentum" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>basis_one</strong> (<em>std::vector&lt; StateOne,std::allocator&lt; StateOne &gt; &gt; const &amp;</em>) &#8211; </li>
+<li><strong>q</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.precalculateMultipole">
+<code class="descname">precalculateMultipole</code><span class="sig-paren">(</span><em>self</em>, <em>basis_one</em>, <em>k</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.precalculateMultipole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.precalculateMultipole" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>basis_one</strong> (<em>std::vector&lt; StateOne,std::allocator&lt; StateOne &gt; &gt; const &amp;</em>) &#8211; </li>
+<li><strong>k</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.precalculateRadial">
+<code class="descname">precalculateRadial</code><span class="sig-paren">(</span><em>self</em>, <em>basis_one</em>, <em>k</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.precalculateRadial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.precalculateRadial" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>basis_one</strong> (<em>std::vector&lt; StateOne,std::allocator&lt; StateOne &gt; &gt; const &amp;</em>) &#8211; </li>
+<li><strong>k</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.setDefectDB">
+<code class="descname">setDefectDB</code><span class="sig-paren">(</span><em>self</em>, <em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.setDefectDB"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.setDefectDB" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>std::string const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.setMethod">
+<code class="descname">setMethod</code><span class="sig-paren">(</span><em>self</em>, <em>m</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.setMethod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.setMethod" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> (<em>method_t const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.MatrixElementCache.size">
+<code class="descname">size</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; size_t<a class="reference internal" href="_modules/picomplex.html#MatrixElementCache.size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.MatrixElementCache.size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>MatrixElementCache *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.Numerov">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">Numerov</code><span class="sig-paren">(</span><em>self</em>, <em>qd</em><span class="sig-paren">)</span> &rarr; Numerov<a class="reference internal" href="_modules/picomplex.html#Numerov"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Numerov" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>qd</strong> (<em>QuantumDefect const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="picomplex.Numerov.integrate">
+<code class="descname">integrate</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_dense_double_t<a class="reference internal" href="_modules/picomplex.html#Numerov.integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Numerov.integrate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>Numerov *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="picomplex.Numerov.power_kernel">
+<em class="property">static </em><code class="descname">power_kernel</code><span class="sig-paren">(</span><em>power</em><span class="sig-paren">)</span> &rarr; int<a class="reference internal" href="_modules/picomplex.html#Numerov.power_kernel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Numerov.power_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>power</strong> (<em>int</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.Numerov_power_kernel">
+<code class="descclassname">picomplex.</code><code class="descname">Numerov_power_kernel</code><span class="sig-paren">(</span><em>power</em><span class="sig-paren">)</span> &rarr; int<a class="reference internal" href="_modules/picomplex.html#Numerov_power_kernel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Numerov_power_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>power</strong> (<em>int</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.PerturbativeInteraction">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">PerturbativeInteraction</code><span class="sig-paren">(</span><em>self</em>, <em>cache</em><span class="sig-paren">)</span> &rarr; PerturbativeInteraction<a class="reference internal" href="_modules/picomplex.html#PerturbativeInteraction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.PerturbativeInteraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cache</strong> (<em>MatrixElementCache &amp;</em>) &#8211; </li>
+<li><strong>angle, cache) -&gt; PerturbativeInteraction</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>angle</strong> (<em>double</em>) &#8211; </li>
+<li><strong>cache</strong> &#8211; </li>
+<li><strong>angle, weak_bfield_along_z, cache) -&gt; PerturbativeInteraction</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>angle</strong> &#8211; </li>
+<li><strong>weak_bfield_along_z</strong> (<em>double</em>) &#8211; </li>
+<li><strong>cache</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="picomplex.PerturbativeInteraction.getC3">
+<code class="descname">getC3</code><span class="sig-paren">(</span><em>self</em>, <em>states</em><span class="sig-paren">)</span> &rarr; eigen_dense_double_t<a class="reference internal" href="_modules/picomplex.html#PerturbativeInteraction.getC3"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.PerturbativeInteraction.getC3" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>states</strong> (<em>std::vector&lt; StateTwo,std::allocator&lt; StateTwo &gt; &gt;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.PerturbativeInteraction.getC6">
+<code class="descname">getC6</code><span class="sig-paren">(</span><em>self</em>, <em>state</em>, <em>deltaN</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#PerturbativeInteraction.getC6"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.PerturbativeInteraction.getC6" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state</strong> (<a class="reference internal" href="pireal.html#pireal.StateTwo" title="pireal.StateTwo"><em>StateTwo</em></a>) &#8211; </li>
+<li><strong>deltaN</strong> (<em>double</em>) &#8211; </li>
+<li><strong>states, deltaN) -&gt; eigen_dense_double_t</strong> (<em>getC6(self,</em>) &#8211; </li>
+<li><strong>states</strong> (<em>std::vector&lt; StateTwo,std::allocator&lt; StateTwo &gt; &gt;</em>) &#8211; </li>
+<li><strong>deltaN</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.PerturbativeInteraction.getEnergies">
+<code class="descname">getEnergies</code><span class="sig-paren">(</span><em>self</em>, <em>states</em><span class="sig-paren">)</span> &rarr; eigen_dense_double_t<a class="reference internal" href="_modules/picomplex.html#PerturbativeInteraction.getEnergies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.PerturbativeInteraction.getEnergies" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>states</strong> (<em>std::vector&lt; StateTwo,std::allocator&lt; StateTwo &gt; &gt;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.QuantumDefect">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">QuantumDefect</code><span class="sig-paren">(</span><em>self</em>, <em>species</em>, <em>n</em>, <em>l</em>, <em>j</em><span class="sig-paren">)</span> &rarr; QuantumDefect<a class="reference internal" href="_modules/picomplex.html#QuantumDefect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.QuantumDefect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>species</strong> (<em>std::string const &amp;</em>) &#8211; </li>
+<li><strong>n</strong> (<em>int</em>) &#8211; </li>
+<li><strong>l</strong> (<em>int</em>) &#8211; </li>
+<li><strong>j</strong> (<em>double</em>) &#8211; </li>
+<li><strong>species, n, l, j, database) -&gt; QuantumDefect</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>species</strong> &#8211; </li>
+<li><strong>n</strong> &#8211; </li>
+<li><strong>l</strong> &#8211; </li>
+<li><strong>j</strong> &#8211; </li>
+<li><strong>database</strong> (<em>std::string const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.Z">
+<code class="descname">Z</code><a class="headerlink" href="#picomplex.QuantumDefect.Z" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_Z_get(self) -&gt; int const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.a1">
+<code class="descname">a1</code><a class="headerlink" href="#picomplex.QuantumDefect.a1" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_a1_get(self) -&gt; double const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.a2">
+<code class="descname">a2</code><a class="headerlink" href="#picomplex.QuantumDefect.a2" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_a2_get(self) -&gt; double const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.a3">
+<code class="descname">a3</code><a class="headerlink" href="#picomplex.QuantumDefect.a3" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_a3_get(self) -&gt; double const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.a4">
+<code class="descname">a4</code><a class="headerlink" href="#picomplex.QuantumDefect.a4" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_a4_get(self) -&gt; double const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.ac">
+<code class="descname">ac</code><a class="headerlink" href="#picomplex.QuantumDefect.ac" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_ac_get(self) -&gt; double const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.energy">
+<code class="descname">energy</code><a class="headerlink" href="#picomplex.QuantumDefect.energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_energy_get(self) -&gt; double const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.j">
+<code class="descname">j</code><a class="headerlink" href="#picomplex.QuantumDefect.j" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_j_get(self) -&gt; double const</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.l">
+<code class="descname">l</code><a class="headerlink" href="#picomplex.QuantumDefect.l" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_l_get(self) -&gt; int const</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.n">
+<code class="descname">n</code><a class="headerlink" href="#picomplex.QuantumDefect.n" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_n_get(self) -&gt; int const</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.nstar">
+<code class="descname">nstar</code><a class="headerlink" href="#picomplex.QuantumDefect.nstar" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_nstar_get(self) -&gt; double const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.rc">
+<code class="descname">rc</code><a class="headerlink" href="#picomplex.QuantumDefect.rc" title="Permalink to this definition">¶</a></dt>
+<dd><p>QuantumDefect_rc_get(self) -&gt; double const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.QuantumDefect.species">
+<code class="descname">species</code><a class="headerlink" href="#picomplex.QuantumDefect.species" title="Permalink to this definition">¶</a></dt>
+<dd><p><a href="#id1"><span class="problematic" id="id2">**</span></a>QuantumDefect_species_get(self) -&gt; std* &#8211;* &#8211; string const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>QuantumDefect *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.RadialWFWhittaker">
+<code class="descclassname">picomplex.</code><code class="descname">RadialWFWhittaker</code><span class="sig-paren">(</span><em>r</em>, <em>nu</em>, <em>l</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#RadialWFWhittaker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.RadialWFWhittaker" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>r</strong> (<em>double</em>) &#8211; </li>
+<li><strong>nu</strong> (<em>double</em>) &#8211; </li>
+<li><strong>l</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.State">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">State</code><span class="sig-paren">(</span><em>self</em>, <em>idx</em><span class="sig-paren">)</span> &rarr; State<a class="reference internal" href="_modules/picomplex.html#State"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.State" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idx</strong> (<em>idx_t</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="picomplex.State.idx">
+<code class="descname">idx</code><a class="headerlink" href="#picomplex.State.idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>State_idx_get(self) -&gt; idx_t</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>State *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.StateOne">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">StateOne</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; StateOne<a class="reference internal" href="_modules/picomplex.html#StateOne"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateOne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#picomplex.State" title="picomplex.State"><code class="xref py py-class docutils literal"><span class="pre">picomplex.State</span></code></a></p>
+<p>__init__(self, element, n, l, j, m) -&gt; StateOne</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>element</strong> (<em>std::string</em>) &#8211; </li>
+<li><strong>n</strong> (<em>int</em>) &#8211; </li>
+<li><strong>l</strong> (<em>int</em>) &#8211; </li>
+<li><strong>j</strong> (<em>float</em>) &#8211; </li>
+<li><strong>m</strong> (<em>float</em>) &#8211; </li>
+<li><strong>idx, n, l, j, m) -&gt; StateOne</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>idx</strong> (<em>idx_t</em>) &#8211; </li>
+<li><strong>n</strong> &#8211; </li>
+<li><strong>l</strong> &#8211; </li>
+<li><strong>j</strong> &#8211; </li>
+<li><strong>m</strong> &#8211; </li>
+<li><strong>n, l, j, m) -&gt; StateOne</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>n</strong> &#8211; </li>
+<li><strong>l</strong> &#8211; </li>
+<li><strong>j</strong> &#8211; </li>
+<li><strong>m</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="picomplex.StateOne.element">
+<code class="descname">element</code><a class="headerlink" href="#picomplex.StateOne.element" title="Permalink to this definition">¶</a></dt>
+<dd><p><a href="#id3"><span class="problematic" id="id4">**</span></a>StateOne_element_get(self) -&gt; std* &#8211;* &#8211; string const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateOne.energy">
+<code class="descname">energy</code><a class="headerlink" href="#picomplex.StateOne.energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateOne_energy_get(self) -&gt; double</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateOne.getEnergy">
+<code class="descname">getEnergy</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#StateOne.getEnergy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateOne.getEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateOne.getJ">
+<code class="descname">getJ</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; float<a class="reference internal" href="_modules/picomplex.html#StateOne.getJ"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateOne.getJ" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateOne.getL">
+<code class="descname">getL</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; int<a class="reference internal" href="_modules/picomplex.html#StateOne.getL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateOne.getL" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateOne.getM">
+<code class="descname">getM</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; float<a class="reference internal" href="_modules/picomplex.html#StateOne.getM"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateOne.getM" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateOne.getN">
+<code class="descname">getN</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; int<a class="reference internal" href="_modules/picomplex.html#StateOne.getN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateOne.getN" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateOne.getNStar">
+<code class="descname">getNStar</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#StateOne.getNStar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateOne.getNStar" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateOne.getSpecies">
+<code class="descname">getSpecies</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; std::string<a class="reference internal" href="_modules/picomplex.html#StateOne.getSpecies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateOne.getSpecies" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateOne.idx">
+<code class="descname">idx</code><a class="headerlink" href="#picomplex.StateOne.idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>State_idx_get(self) -&gt; idx_t</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>State *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateOne.j">
+<code class="descname">j</code><a class="headerlink" href="#picomplex.StateOne.j" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateOne_j_get(self) -&gt; float</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateOne.l">
+<code class="descname">l</code><a class="headerlink" href="#picomplex.StateOne.l" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateOne_l_get(self) -&gt; int</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateOne.m">
+<code class="descname">m</code><a class="headerlink" href="#picomplex.StateOne.m" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateOne_m_get(self) -&gt; float</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateOne.n">
+<code class="descname">n</code><a class="headerlink" href="#picomplex.StateOne.n" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateOne_n_get(self) -&gt; int</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateOne.s">
+<code class="descname">s</code><a class="headerlink" href="#picomplex.StateOne.s" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateOne_s_get(self) -&gt; float</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateOne.species">
+<code class="descname">species</code><a class="headerlink" href="#picomplex.StateOne.species" title="Permalink to this definition">¶</a></dt>
+<dd><p><a href="#id5"><span class="problematic" id="id6">**</span></a>StateOne_species_get(self) -&gt; std* &#8211;* &#8211; string const &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateOne *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.StateTwo">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">StateTwo</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; StateTwo<a class="reference internal" href="_modules/picomplex.html#StateTwo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#picomplex.State" title="picomplex.State"><code class="xref py py-class docutils literal"><span class="pre">picomplex.State</span></code></a></p>
+<p>__init__(self, element, n, l, j, m) -&gt; StateTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>element</strong> (<em>std::array&lt; std::string,2 &gt;</em>) &#8211; </li>
+<li><strong>n</strong> (<em>std::array&lt; int,2 &gt;</em>) &#8211; </li>
+<li><strong>l</strong> (<em>std::array&lt; int,2 &gt;</em>) &#8211; </li>
+<li><strong>j</strong> (<em>std::array&lt; float,2 &gt;</em>) &#8211; </li>
+<li><strong>m</strong> (<em>std::array&lt; float,2 &gt;</em>) &#8211; </li>
+<li><strong>s1, s2) -&gt; StateTwo</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>s1</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>s2</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>idx, n, l, j, m) -&gt; StateTwo</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>idx</strong> (<em>idx_t</em>) &#8211; </li>
+<li><strong>n</strong> &#8211; </li>
+<li><strong>l</strong> &#8211; </li>
+<li><strong>j</strong> &#8211; </li>
+<li><strong>m</strong> &#8211; </li>
+<li><strong>n, l, j, m) -&gt; StateTwo</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>n</strong> &#8211; </li>
+<li><strong>l</strong> &#8211; </li>
+<li><strong>j</strong> &#8211; </li>
+<li><strong>m</strong> &#8211; </li>
+<li><strong>idx, a, b) -&gt; StateTwo</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>idx</strong> &#8211; </li>
+<li><strong>a</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>b</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="picomplex.StateTwo.element">
+<code class="descname">element</code><a class="headerlink" href="#picomplex.StateTwo.element" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateTwo_element_get(self) -&gt; ArrayStringTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateTwo.energy">
+<code class="descname">energy</code><a class="headerlink" href="#picomplex.StateTwo.energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateTwo_energy_get(self) -&gt; double</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.first">
+<code class="descname">first</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; StateOne<a class="reference internal" href="_modules/picomplex.html#StateTwo.first"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.first" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getEnergy">
+<code class="descname">getEnergy</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#StateTwo.getEnergy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getFirstState">
+<code class="descname">getFirstState</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; StateOne<a class="reference internal" href="_modules/picomplex.html#StateTwo.getFirstState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getFirstState" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getJ">
+<code class="descname">getJ</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; ArrayFloatTwo<a class="reference internal" href="_modules/picomplex.html#StateTwo.getJ"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getJ" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getL">
+<code class="descname">getL</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; ArrayIntTwo<a class="reference internal" href="_modules/picomplex.html#StateTwo.getL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getL" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getM">
+<code class="descname">getM</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; ArrayFloatTwo<a class="reference internal" href="_modules/picomplex.html#StateTwo.getM"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getM" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getN">
+<code class="descname">getN</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; ArrayIntTwo<a class="reference internal" href="_modules/picomplex.html#StateTwo.getN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getN" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getNStar">
+<code class="descname">getNStar</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; ArrayDoubleTwo<a class="reference internal" href="_modules/picomplex.html#StateTwo.getNStar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getNStar" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getSecondState">
+<code class="descname">getSecondState</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; StateOne<a class="reference internal" href="_modules/picomplex.html#StateTwo.getSecondState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getSecondState" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.getSpecies">
+<code class="descname">getSpecies</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; ArrayStringTwo<a class="reference internal" href="_modules/picomplex.html#StateTwo.getSpecies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.getSpecies" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateTwo.idx">
+<code class="descname">idx</code><a class="headerlink" href="#picomplex.StateTwo.idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>State_idx_get(self) -&gt; idx_t</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>State *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateTwo.j">
+<code class="descname">j</code><a class="headerlink" href="#picomplex.StateTwo.j" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateTwo_j_get(self) -&gt; ArrayFloatTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateTwo.l">
+<code class="descname">l</code><a class="headerlink" href="#picomplex.StateTwo.l" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateTwo_l_get(self) -&gt; ArrayIntTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateTwo.m">
+<code class="descname">m</code><a class="headerlink" href="#picomplex.StateTwo.m" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateTwo_m_get(self) -&gt; ArrayFloatTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateTwo.n">
+<code class="descname">n</code><a class="headerlink" href="#picomplex.StateTwo.n" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateTwo_n_get(self) -&gt; ArrayIntTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.order">
+<code class="descname">order</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; StateTwo<a class="reference internal" href="_modules/picomplex.html#StateTwo.order"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.order" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateTwo.s">
+<code class="descname">s</code><a class="headerlink" href="#picomplex.StateTwo.s" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateTwo_s_get(self) -&gt; ArrayFloatTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.second">
+<code class="descname">second</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; StateOne<a class="reference internal" href="_modules/picomplex.html#StateTwo.second"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.second" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.setFirstState">
+<code class="descname">setFirstState</code><span class="sig-paren">(</span><em>self</em>, <em>arg2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#StateTwo.setFirstState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.setFirstState" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg2</strong> (<em>StateOne const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.StateTwo.setSecondState">
+<code class="descname">setSecondState</code><span class="sig-paren">(</span><em>self</em>, <em>arg2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#StateTwo.setSecondState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.StateTwo.setSecondState" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg2</strong> (<em>StateOne const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.StateTwo.species">
+<code class="descname">species</code><a class="headerlink" href="#picomplex.StateTwo.species" title="Permalink to this definition">¶</a></dt>
+<dd><p>StateTwo_species_get(self) -&gt; ArrayStringTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>StateTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.Symmetry">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">Symmetry</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; Symmetry<a class="reference internal" href="_modules/picomplex.html#Symmetry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Symmetry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="picomplex.Symmetry.inversion">
+<code class="descname">inversion</code><a class="headerlink" href="#picomplex.Symmetry.inversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symmetry_inversion_get(self) -&gt; parity_t</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>Symmetry *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.Symmetry.permutation">
+<code class="descname">permutation</code><a class="headerlink" href="#picomplex.Symmetry.permutation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symmetry_permutation_get(self) -&gt; parity_t</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>Symmetry *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.Symmetry.reflection">
+<code class="descname">reflection</code><a class="headerlink" href="#picomplex.Symmetry.reflection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symmetry_reflection_get(self) -&gt; parity_t</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>Symmetry *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.Symmetry.rotation">
+<code class="descname">rotation</code><a class="headerlink" href="#picomplex.Symmetry.rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Symmetry_rotation_get(self) -&gt; int</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>Symmetry *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.SystemOne">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">SystemOne</code><span class="sig-paren">(</span><em>self</em>, <em>species</em>, <em>cache</em><span class="sig-paren">)</span> &rarr; SystemOne<a class="reference internal" href="_modules/picomplex.html#SystemOne"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemOne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">picomplex._SystemStateOne</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>species</strong> (<em>std::string</em>) &#8211; </li>
+<li><strong>cache</strong> (<em>MatrixElementCache &amp;</em>) &#8211; </li>
+<li><strong>species, cache, memory_saving) -&gt; SystemOne</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>species</strong> &#8211; </li>
+<li><strong>cache</strong> &#8211; </li>
+<li><strong>memory_saving</strong> (<em>bool</em>) &#8211; </li>
+<li><strong>other) -&gt; SystemOne</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>other</strong> (<em>SystemOne const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="picomplex.SystemOne.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>self</em>, <em>system</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.add" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>system</strong> (<em>SystemBase&lt; StateOne &gt; &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.addHamiltonianentry">
+<code class="descname">addHamiltonianentry</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.addHamiltonianentry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>value</strong> (<em>scalar_t</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.buildBasis">
+<code class="descname">buildBasis</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.buildBasis" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.buildHamiltonian">
+<code class="descname">buildHamiltonian</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.buildHamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.buildInteraction">
+<code class="descname">buildInteraction</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.buildInteraction" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.canonicalize">
+<code class="descname">canonicalize</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.canonicalize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.SystemOne.coefficients">
+<code class="descname">coefficients</code><a class="headerlink" href="#picomplex.SystemOne.coefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCoefficients(self) -&gt; eigen_sparse_t &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.derotate">
+<code class="descname">derotate</code><span class="sig-paren">(</span><em>self</em>, <em>to_z_axis</em>, <em>to_y_axis</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.derotate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>to_z_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>to_y_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>alpha, beta, gamma)</strong> (<em>derotate(self,</em>) &#8211; </li>
+<li><strong>alpha</strong> (<em>double</em>) &#8211; </li>
+<li><strong>beta</strong> (<em>double</em>) &#8211; </li>
+<li><strong>gamma</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.SystemOne.diagonal">
+<code class="descname">diagonal</code><a class="headerlink" href="#picomplex.SystemOne.diagonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>getDiagonal(self) -&gt; eigen_vector_double_t</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.diagonalize">
+<code class="descname">diagonalize</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.diagonalize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.forgetStatemixing">
+<code class="descname">forgetStatemixing</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.forgetStatemixing" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getBasisvectors">
+<code class="descname">getBasisvectors</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_sparse_t &amp;<a class="headerlink" href="#picomplex.SystemOne.getBasisvectors" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getCoefficients">
+<code class="descname">getCoefficients</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_sparse_t &amp;<a class="headerlink" href="#picomplex.SystemOne.getCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getConnections">
+<code class="descname">getConnections</code><span class="sig-paren">(</span><em>self</em>, <em>system_to</em>, <em>threshold</em><span class="sig-paren">)</span> &rarr; ArrayVectorSizeTTwo<a class="headerlink" href="#picomplex.SystemOne.getConnections" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>system_to</strong> (<em>SystemBase&lt; StateOne &gt; &amp;</em>) &#8211; </li>
+<li><strong>threshold</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getDiagonal">
+<code class="descname">getDiagonal</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_vector_double_t<a class="headerlink" href="#picomplex.SystemOne.getDiagonal" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getElement">
+<code class="descname">getElement</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; std::string const &amp;<a class="reference internal" href="_modules/picomplex.html#SystemOne.getElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemOne.getElement" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemOne const *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getHamiltonian">
+<code class="descname">getHamiltonian</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_sparse_t &amp;<a class="headerlink" href="#picomplex.SystemOne.getHamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getHamiltonianentry">
+<code class="descname">getHamiltonianentry</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em><span class="sig-paren">)</span> &rarr; scalar_t<a class="headerlink" href="#picomplex.SystemOne.getHamiltonianentry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getHamiltonianmatrix">
+<code class="descname">getHamiltonianmatrix</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_sparse_t &amp;<a class="headerlink" href="#picomplex.SystemOne.getHamiltonianmatrix" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getMainStates">
+<code class="descname">getMainStates</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; VectorStateOne<a class="headerlink" href="#picomplex.SystemOne.getMainStates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getNumBasisvectors">
+<code class="descname">getNumBasisvectors</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemOne.getNumBasisvectors" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getNumStates">
+<code class="descname">getNumStates</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemOne.getNumStates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getNumVectors">
+<code class="descname">getNumVectors</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemOne.getNumVectors" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getOverlap">
+<code class="descname">getOverlap</code><span class="sig-paren">(</span><em>self</em>, <em>generalizedstate</em><span class="sig-paren">)</span> &rarr; eigen_vector_double_t<a class="headerlink" href="#picomplex.SystemOne.getOverlap" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>generalizedstate</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state, to_z_axis, to_y_axis) -&gt; eigen_vector_double_t</strong> (<em>getOverlap(self,</em>) &#8211; </li>
+<li><strong>state</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>to_z_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>to_y_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>generalizedstate, alpha, beta, gamma) -&gt; eigen_vector_double_t</strong> (<em>getOverlap(self,</em>) &#8211; </li>
+<li><strong>generalizedstate</strong> &#8211; </li>
+<li><strong>alpha</strong> (<em>double</em>) &#8211; </li>
+<li><strong>beta</strong> (<em>double</em>) &#8211; </li>
+<li><strong>gamma</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getStateindex">
+<code class="descname">getStateindex</code><span class="sig-paren">(</span><em>self</em>, <em>state</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemOne.getStateindex" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>StateOne const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getStates">
+<code class="descname">getStates</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; VectorStateOne<a class="headerlink" href="#picomplex.SystemOne.getStates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.getVectorindex">
+<code class="descname">getVectorindex</code><span class="sig-paren">(</span><em>self</em>, <em>state</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemOne.getVectorindex" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>StateOne const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.SystemOne.hamiltonianmatrix">
+<code class="descname">hamiltonianmatrix</code><a class="headerlink" href="#picomplex.SystemOne.hamiltonianmatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>getHamiltonianmatrix(self) -&gt; eigen_sparse_t &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.restrictEnergy">
+<code class="descname">restrictEnergy</code><span class="sig-paren">(</span><em>self</em>, <em>e_min</em>, <em>e_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.restrictEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>e_min</strong> (<em>double</em>) &#8211; </li>
+<li><strong>e_max</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.restrictJ">
+<code class="descname">restrictJ</code><span class="sig-paren">(</span><em>self</em>, <em>j_min</em>, <em>j_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.restrictJ" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>j_min</strong> (<em>float</em>) &#8211; </li>
+<li><strong>j_max</strong> (<em>float</em>) &#8211; </li>
+<li><strong>j)</strong> (<em>restrictJ(self,</em>) &#8211; </li>
+<li><strong>j</strong> (<em>std::set&lt; float,std::less&lt; float &gt;,std::allocator&lt; float &gt; &gt;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.restrictL">
+<code class="descname">restrictL</code><span class="sig-paren">(</span><em>self</em>, <em>l_min</em>, <em>l_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.restrictL" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>l_min</strong> (<em>int</em>) &#8211; </li>
+<li><strong>l_max</strong> (<em>int</em>) &#8211; </li>
+<li><strong>l)</strong> (<em>restrictL(self,</em>) &#8211; </li>
+<li><strong>l</strong> (<em>std::set&lt; int,std::less&lt; int &gt;,std::allocator&lt; int &gt; &gt;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.restrictM">
+<code class="descname">restrictM</code><span class="sig-paren">(</span><em>self</em>, <em>m_min</em>, <em>m_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.restrictM" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>m_min</strong> (<em>float</em>) &#8211; </li>
+<li><strong>m_max</strong> (<em>float</em>) &#8211; </li>
+<li><strong>m)</strong> (<em>restrictM(self,</em>) &#8211; </li>
+<li><strong>m</strong> (<em>std::set&lt; float,std::less&lt; float &gt;,std::allocator&lt; float &gt; &gt;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.restrictN">
+<code class="descname">restrictN</code><span class="sig-paren">(</span><em>self</em>, <em>n_min</em>, <em>n_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.restrictN" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>n_min</strong> (<em>int</em>) &#8211; </li>
+<li><strong>n_max</strong> (<em>int</em>) &#8211; </li>
+<li><strong>n)</strong> (<em>restrictN(self,</em>) &#8211; </li>
+<li><strong>n</strong> (<em>std::set&lt; int,std::less&lt; int &gt;,std::allocator&lt; int &gt; &gt;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>self</em>, <em>to_z_axis</em>, <em>to_y_axis</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>to_z_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>to_y_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>alpha, beta, gamma)</strong> (<em>rotate(self,</em>) &#8211; </li>
+<li><strong>alpha</strong> (<em>double</em>) &#8211; </li>
+<li><strong>beta</strong> (<em>double</em>) &#8211; </li>
+<li><strong>gamma</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.setArtificialstates">
+<code class="descname">setArtificialstates</code><span class="sig-paren">(</span><em>self</em>, <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.setArtificialstates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>s</strong> (<em>std::vector&lt; StateOne,std::allocator&lt; StateOne &gt; &gt; const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.setBfield">
+<code class="descname">setBfield</code><span class="sig-paren">(</span><em>self</em>, <em>field</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemOne.setBfield"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemOne.setBfield" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>field</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>field, to_z_axis, to_y_axis)</strong> (<em>setBfield(self,</em>) &#8211; </li>
+<li><strong>field</strong> &#8211; </li>
+<li><strong>to_z_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>to_y_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>field, alpha, beta, gamma)</strong> (<em>setBfield(self,</em>) &#8211; </li>
+<li><strong>field</strong> &#8211; </li>
+<li><strong>alpha</strong> (<em>double</em>) &#8211; </li>
+<li><strong>beta</strong> (<em>double</em>) &#8211; </li>
+<li><strong>gamma</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.setConservedMomentaUnderRotation">
+<code class="descname">setConservedMomentaUnderRotation</code><span class="sig-paren">(</span><em>self</em>, <em>momenta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemOne.setConservedMomentaUnderRotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemOne.setConservedMomentaUnderRotation" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>momenta</strong> (<em>std::set&lt; float,std::less&lt; float &gt;,std::allocator&lt; float &gt; &gt; const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.setConservedParityUnderReflection">
+<code class="descname">setConservedParityUnderReflection</code><span class="sig-paren">(</span><em>self</em>, <em>parity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemOne.setConservedParityUnderReflection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemOne.setConservedParityUnderReflection" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parity</strong> (<em>enum parity_t</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.setDiamagnetism">
+<code class="descname">setDiamagnetism</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemOne.setDiamagnetism"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemOne.setDiamagnetism" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.setEfield">
+<code class="descname">setEfield</code><span class="sig-paren">(</span><em>self</em>, <em>field</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemOne.setEfield"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemOne.setEfield" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>field</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>field, to_z_axis, to_y_axis)</strong> (<em>setEfield(self,</em>) &#8211; </li>
+<li><strong>field</strong> &#8211; </li>
+<li><strong>to_z_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>to_y_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>field, alpha, beta, gamma)</strong> (<em>setEfield(self,</em>) &#8211; </li>
+<li><strong>field</strong> &#8211; </li>
+<li><strong>alpha</strong> (<em>double</em>) &#8211; </li>
+<li><strong>beta</strong> (<em>double</em>) &#8211; </li>
+<li><strong>gamma</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemOne.setHamiltonianentry">
+<code class="descname">setHamiltonianentry</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemOne.setHamiltonianentry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>value</strong> (<em>scalar_t</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.SystemOne.states">
+<code class="descname">states</code><a class="headerlink" href="#picomplex.SystemOne.states" title="Permalink to this definition">¶</a></dt>
+<dd><p>getStates(self) -&gt; VectorStateOne</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateOne &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.SystemTwo">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">SystemTwo</code><span class="sig-paren">(</span><em>self</em>, <em>b1</em>, <em>b2</em>, <em>cache</em><span class="sig-paren">)</span> &rarr; SystemTwo<a class="reference internal" href="_modules/picomplex.html#SystemTwo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">picomplex._SystemStateTwo</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>b1</strong> (<em>SystemOne const &amp;</em>) &#8211; </li>
+<li><strong>b2</strong> (<em>SystemOne const &amp;</em>) &#8211; </li>
+<li><strong>cache</strong> (<em>MatrixElementCache &amp;</em>) &#8211; </li>
+<li><strong>b1, b2, cache, memory_saving) -&gt; SystemTwo</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>b1</strong> &#8211; </li>
+<li><strong>b2</strong> &#8211; </li>
+<li><strong>cache</strong> &#8211; </li>
+<li><strong>memory_saving</strong> (<em>bool</em>) &#8211; </li>
+<li><strong>other) -&gt; SystemTwo</strong> (<em>__init__(self,</em>) &#8211; </li>
+<li><strong>other</strong> (<em>SystemTwo const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="picomplex.SystemTwo.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>self</em>, <em>system</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.add" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>system</strong> (<em>SystemBase&lt; StateTwo &gt; &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.addHamiltonianentry">
+<code class="descname">addHamiltonianentry</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.addHamiltonianentry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateTwo const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateTwo const &amp;</em>) &#8211; </li>
+<li><strong>value</strong> (<em>scalar_t</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.buildBasis">
+<code class="descname">buildBasis</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.buildBasis" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.buildHamiltonian">
+<code class="descname">buildHamiltonian</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.buildHamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.buildInteraction">
+<code class="descname">buildInteraction</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.buildInteraction" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.canonicalize">
+<code class="descname">canonicalize</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.canonicalize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.SystemTwo.coefficients">
+<code class="descname">coefficients</code><a class="headerlink" href="#picomplex.SystemTwo.coefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCoefficients(self) -&gt; eigen_sparse_t &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.derotate">
+<code class="descname">derotate</code><span class="sig-paren">(</span><em>self</em>, <em>to_z_axis</em>, <em>to_y_axis</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.derotate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>to_z_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>to_y_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>alpha, beta, gamma)</strong> (<em>derotate(self,</em>) &#8211; </li>
+<li><strong>alpha</strong> (<em>double</em>) &#8211; </li>
+<li><strong>beta</strong> (<em>double</em>) &#8211; </li>
+<li><strong>gamma</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.SystemTwo.diagonal">
+<code class="descname">diagonal</code><a class="headerlink" href="#picomplex.SystemTwo.diagonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>getDiagonal(self) -&gt; eigen_vector_double_t</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.diagonalize">
+<code class="descname">diagonalize</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.diagonalize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.forgetStatemixing">
+<code class="descname">forgetStatemixing</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.forgetStatemixing" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getBasisvectors">
+<code class="descname">getBasisvectors</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_sparse_t &amp;<a class="headerlink" href="#picomplex.SystemTwo.getBasisvectors" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getCoefficients">
+<code class="descname">getCoefficients</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_sparse_t &amp;<a class="headerlink" href="#picomplex.SystemTwo.getCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getConnections">
+<code class="descname">getConnections</code><span class="sig-paren">(</span><em>self</em>, <em>system_to</em>, <em>threshold</em><span class="sig-paren">)</span> &rarr; ArrayVectorSizeTTwo<a class="headerlink" href="#picomplex.SystemTwo.getConnections" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>system_to</strong> (<em>SystemBase&lt; StateTwo &gt; &amp;</em>) &#8211; </li>
+<li><strong>threshold</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getDiagonal">
+<code class="descname">getDiagonal</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_vector_double_t<a class="headerlink" href="#picomplex.SystemTwo.getDiagonal" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getElement">
+<code class="descname">getElement</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; ArrayStringTwo<a class="reference internal" href="_modules/picomplex.html#SystemTwo.getElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.getElement" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getHamiltonian">
+<code class="descname">getHamiltonian</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_sparse_t &amp;<a class="headerlink" href="#picomplex.SystemTwo.getHamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getHamiltonianentry">
+<code class="descname">getHamiltonianentry</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em><span class="sig-paren">)</span> &rarr; scalar_t<a class="headerlink" href="#picomplex.SystemTwo.getHamiltonianentry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateTwo const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateTwo const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getHamiltonianmatrix">
+<code class="descname">getHamiltonianmatrix</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_sparse_t &amp;<a class="headerlink" href="#picomplex.SystemTwo.getHamiltonianmatrix" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getMainStates">
+<code class="descname">getMainStates</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; VectorStateTwo<a class="headerlink" href="#picomplex.SystemTwo.getMainStates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getNumBasisvectors">
+<code class="descname">getNumBasisvectors</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemTwo.getNumBasisvectors" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getNumStates">
+<code class="descname">getNumStates</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemTwo.getNumStates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getNumVectors">
+<code class="descname">getNumVectors</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemTwo.getNumVectors" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getOverlap">
+<code class="descname">getOverlap</code><span class="sig-paren">(</span><em>self</em>, <em>generalizedstate</em><span class="sig-paren">)</span> &rarr; eigen_vector_double_t<a class="headerlink" href="#picomplex.SystemTwo.getOverlap" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>generalizedstate</strong> (<em>StateTwo const &amp;</em>) &#8211; </li>
+<li><strong>state, to_z_axis, to_y_axis) -&gt; eigen_vector_double_t</strong> (<em>getOverlap(self,</em>) &#8211; </li>
+<li><strong>state</strong> (<em>StateTwo const &amp;</em>) &#8211; </li>
+<li><strong>to_z_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>to_y_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>generalizedstate, alpha, beta, gamma) -&gt; eigen_vector_double_t</strong> (<em>getOverlap(self,</em>) &#8211; </li>
+<li><strong>generalizedstate</strong> &#8211; </li>
+<li><strong>alpha</strong> (<em>double</em>) &#8211; </li>
+<li><strong>beta</strong> (<em>double</em>) &#8211; </li>
+<li><strong>gamma</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getStateindex">
+<code class="descname">getStateindex</code><span class="sig-paren">(</span><em>self</em>, <em>state</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemTwo.getStateindex" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>StateTwo const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getStates">
+<code class="descname">getStates</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; VectorStateTwo<a class="headerlink" href="#picomplex.SystemTwo.getStates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getStatesFirst">
+<code class="descname">getStatesFirst</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; VectorStateOne<a class="reference internal" href="_modules/picomplex.html#SystemTwo.getStatesFirst"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.getStatesFirst" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getStatesSecond">
+<code class="descname">getStatesSecond</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; VectorStateOne<a class="reference internal" href="_modules/picomplex.html#SystemTwo.getStatesSecond"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.getStatesSecond" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemTwo *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.getVectorindex">
+<code class="descname">getVectorindex</code><span class="sig-paren">(</span><em>self</em>, <em>state</em><span class="sig-paren">)</span> &rarr; size_t<a class="headerlink" href="#picomplex.SystemTwo.getVectorindex" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>StateTwo const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.SystemTwo.hamiltonianmatrix">
+<code class="descname">hamiltonianmatrix</code><a class="headerlink" href="#picomplex.SystemTwo.hamiltonianmatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>getHamiltonianmatrix(self) -&gt; eigen_sparse_t &amp;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.restrictEnergy">
+<code class="descname">restrictEnergy</code><span class="sig-paren">(</span><em>self</em>, <em>e_min</em>, <em>e_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.restrictEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>e_min</strong> (<em>double</em>) &#8211; </li>
+<li><strong>e_max</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.restrictJ">
+<code class="descname">restrictJ</code><span class="sig-paren">(</span><em>self</em>, <em>j_min</em>, <em>j_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.restrictJ" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>j_min</strong> (<em>float</em>) &#8211; </li>
+<li><strong>j_max</strong> (<em>float</em>) &#8211; </li>
+<li><strong>j)</strong> (<em>restrictJ(self,</em>) &#8211; </li>
+<li><strong>j</strong> (<em>std::set&lt; float,std::less&lt; float &gt;,std::allocator&lt; float &gt; &gt;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.restrictL">
+<code class="descname">restrictL</code><span class="sig-paren">(</span><em>self</em>, <em>l_min</em>, <em>l_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.restrictL" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>l_min</strong> (<em>int</em>) &#8211; </li>
+<li><strong>l_max</strong> (<em>int</em>) &#8211; </li>
+<li><strong>l)</strong> (<em>restrictL(self,</em>) &#8211; </li>
+<li><strong>l</strong> (<em>std::set&lt; int,std::less&lt; int &gt;,std::allocator&lt; int &gt; &gt;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.restrictM">
+<code class="descname">restrictM</code><span class="sig-paren">(</span><em>self</em>, <em>m_min</em>, <em>m_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.restrictM" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>m_min</strong> (<em>float</em>) &#8211; </li>
+<li><strong>m_max</strong> (<em>float</em>) &#8211; </li>
+<li><strong>m)</strong> (<em>restrictM(self,</em>) &#8211; </li>
+<li><strong>m</strong> (<em>std::set&lt; float,std::less&lt; float &gt;,std::allocator&lt; float &gt; &gt;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.restrictN">
+<code class="descname">restrictN</code><span class="sig-paren">(</span><em>self</em>, <em>n_min</em>, <em>n_max</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.restrictN" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>n_min</strong> (<em>int</em>) &#8211; </li>
+<li><strong>n_max</strong> (<em>int</em>) &#8211; </li>
+<li><strong>n)</strong> (<em>restrictN(self,</em>) &#8211; </li>
+<li><strong>n</strong> (<em>std::set&lt; int,std::less&lt; int &gt;,std::allocator&lt; int &gt; &gt;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>self</em>, <em>to_z_axis</em>, <em>to_y_axis</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>to_z_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>to_y_axis</strong> (<em>std::array&lt; double,3 &gt;</em>) &#8211; </li>
+<li><strong>alpha, beta, gamma)</strong> (<em>rotate(self,</em>) &#8211; </li>
+<li><strong>alpha</strong> (<em>double</em>) &#8211; </li>
+<li><strong>beta</strong> (<em>double</em>) &#8211; </li>
+<li><strong>gamma</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setAngle">
+<code class="descname">setAngle</code><span class="sig-paren">(</span><em>self</em>, <em>a</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemTwo.setAngle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.setAngle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>a</strong> (<em>double</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setArtificialstates">
+<code class="descname">setArtificialstates</code><span class="sig-paren">(</span><em>self</em>, <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.setArtificialstates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>s</strong> (<em>std::vector&lt; StateTwo,std::allocator&lt; StateTwo &gt; &gt; const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setConservedMomentaUnderRotation">
+<code class="descname">setConservedMomentaUnderRotation</code><span class="sig-paren">(</span><em>self</em>, <em>momenta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemTwo.setConservedMomentaUnderRotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.setConservedMomentaUnderRotation" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>momenta</strong> (<em>std::set&lt; int,std::less&lt; int &gt;,std::allocator&lt; int &gt; &gt; const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setConservedParityUnderInversion">
+<code class="descname">setConservedParityUnderInversion</code><span class="sig-paren">(</span><em>self</em>, <em>parity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemTwo.setConservedParityUnderInversion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.setConservedParityUnderInversion" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parity</strong> (<em>enum parity_t</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setConservedParityUnderPermutation">
+<code class="descname">setConservedParityUnderPermutation</code><span class="sig-paren">(</span><em>self</em>, <em>parity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemTwo.setConservedParityUnderPermutation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.setConservedParityUnderPermutation" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parity</strong> (<em>enum parity_t</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setConservedParityUnderReflection">
+<code class="descname">setConservedParityUnderReflection</code><span class="sig-paren">(</span><em>self</em>, <em>parity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemTwo.setConservedParityUnderReflection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.setConservedParityUnderReflection" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parity</strong> (<em>enum parity_t</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setDistance">
+<code class="descname">setDistance</code><span class="sig-paren">(</span><em>self</em>, <em>d</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemTwo.setDistance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.setDistance" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<em>double</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setHamiltonianentry">
+<code class="descname">setHamiltonianentry</code><span class="sig-paren">(</span><em>self</em>, <em>state_row</em>, <em>state_col</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#picomplex.SystemTwo.setHamiltonianentry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state_row</strong> (<em>StateTwo const &amp;</em>) &#8211; </li>
+<li><strong>state_col</strong> (<em>StateTwo const &amp;</em>) &#8211; </li>
+<li><strong>value</strong> (<em>scalar_t</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="picomplex.SystemTwo.setOrder">
+<code class="descname">setOrder</code><span class="sig-paren">(</span><em>self</em>, <em>o</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/picomplex.html#SystemTwo.setOrder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.SystemTwo.setOrder" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>o</strong> (<em>double</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="picomplex.SystemTwo.states">
+<code class="descname">states</code><a class="headerlink" href="#picomplex.SystemTwo.states" title="Permalink to this definition">¶</a></dt>
+<dd><p>getStates(self) -&gt; VectorStateTwo</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>SystemBase&lt; StateTwo &gt; *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.V">
+<code class="descclassname">picomplex.</code><code class="descname">V</code><span class="sig-paren">(</span><em>qd</em>, <em>x</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#V"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.V" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>qd</strong> (<em>QuantumDefect const &amp;</em>) &#8211; </li>
+<li><strong>x</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="picomplex.Whittaker">
+<em class="property">class </em><code class="descclassname">picomplex.</code><code class="descname">Whittaker</code><span class="sig-paren">(</span><em>self</em>, <em>qd</em><span class="sig-paren">)</span> &rarr; Whittaker<a class="reference internal" href="_modules/picomplex.html#Whittaker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Whittaker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>qd</strong> (<em>QuantumDefect const &amp;</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="picomplex.Whittaker.integrate">
+<code class="descname">integrate</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &rarr; eigen_dense_double_t<a class="reference internal" href="_modules/picomplex.html#Whittaker.integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Whittaker.integrate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> (<em>Whittaker *</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="picomplex.Whittaker.power_kernel">
+<em class="property">static </em><code class="descname">power_kernel</code><span class="sig-paren">(</span><em>power</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#Whittaker.power_kernel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Whittaker.power_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>power</strong> (<em>int</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.WhittakerW">
+<code class="descclassname">picomplex.</code><code class="descname">WhittakerW</code><span class="sig-paren">(</span><em>k</em>, <em>m</em>, <em>z</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#WhittakerW"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.WhittakerW" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>k</strong> (<em>double</em>) &#8211; </li>
+<li><strong>m</strong> (<em>double</em>) &#8211; </li>
+<li><strong>z</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.Whittaker_power_kernel">
+<code class="descclassname">picomplex.</code><code class="descname">Whittaker_power_kernel</code><span class="sig-paren">(</span><em>power</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#Whittaker_power_kernel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.Whittaker_power_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>power</strong> (<em>int</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.compute">
+<code class="descclassname">picomplex.</code><code class="descname">compute</code><span class="sig-paren">(</span><em>config_name</em>, <em>output_name</em><span class="sig-paren">)</span> &rarr; int<a class="reference internal" href="_modules/picomplex.html#compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.compute" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config_name</strong> (<em>std::string const &amp;</em>) &#8211; </li>
+<li><strong>output_name</strong> (<em>std::string const &amp;</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.energy_level">
+<code class="descclassname">picomplex.</code><code class="descname">energy_level</code><span class="sig-paren">(</span><em>species</em>, <em>n</em>, <em>l</em>, <em>j</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#energy_level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.energy_level" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>species</strong> (<em>std::string const &amp;</em>) &#8211; </li>
+<li><strong>n</strong> (<em>int</em>) &#8211; </li>
+<li><strong>l</strong> (<em>int</em>) &#8211; </li>
+<li><strong>j</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.g">
+<code class="descclassname">picomplex.</code><code class="descname">g</code><span class="sig-paren">(</span><em>qd</em>, <em>x</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#g"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.g" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>qd</strong> (<em>QuantumDefect const &amp;</em>) &#8211; </li>
+<li><strong>x</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.nstar">
+<code class="descclassname">picomplex.</code><code class="descname">nstar</code><span class="sig-paren">(</span><em>species</em>, <em>n</em>, <em>l</em>, <em>j</em><span class="sig-paren">)</span> &rarr; double<a class="reference internal" href="_modules/picomplex.html#nstar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.nstar" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>species</strong> (<em>std::string const &amp;</em>) &#8211; </li>
+<li><strong>n</strong> (<em>int</em>) &#8211; </li>
+<li><strong>l</strong> (<em>int</em>) &#8211; </li>
+<li><strong>j</strong> (<em>double</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.selectionRulesMomentumNew">
+<code class="descclassname">picomplex.</code><code class="descname">selectionRulesMomentumNew</code><span class="sig-paren">(</span><em>state1</em>, <em>state2</em>, <em>q</em><span class="sig-paren">)</span> &rarr; bool<a class="reference internal" href="_modules/picomplex.html#selectionRulesMomentumNew"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.selectionRulesMomentumNew" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state1</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state2</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>q</strong> (<em>int</em>) &#8211; </li>
+<li><strong>state2) -&gt; bool</strong> (<em>selectionRulesMomentumNew(state1,</em>) &#8211; </li>
+<li><strong>state1</strong> &#8211; </li>
+<li><strong>state2</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="picomplex.selectionRulesMultipoleNew">
+<code class="descclassname">picomplex.</code><code class="descname">selectionRulesMultipoleNew</code><span class="sig-paren">(</span><em>state1</em>, <em>state2</em>, <em>kappa</em>, <em>q</em><span class="sig-paren">)</span> &rarr; bool<a class="reference internal" href="_modules/picomplex.html#selectionRulesMultipoleNew"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#picomplex.selectionRulesMultipoleNew" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state1</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>state2</strong> (<em>StateOne const &amp;</em>) &#8211; </li>
+<li><strong>kappa</strong> (<em>int</em>) &#8211; </li>
+<li><strong>q</strong> (<em>int</em>) &#8211; </li>
+<li><strong>state2, kappa) -&gt; bool</strong> (<em>selectionRulesMultipoleNew(state1,</em>) &#8211; </li>
+<li><strong>state1</strong> &#8211; </li>
+<li><strong>state2</strong> &#8211; </li>
+<li><strong>kappa</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="pireal.html" class="btn btn-neutral" title="pireal module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Sebastian Weber, Henri Menke.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.9.1-alpha-45-g0b87795',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

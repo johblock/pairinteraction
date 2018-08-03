@@ -1,0 +1,12 @@
+<map id="MatrixElementCache::precalculateDiamagnetism" name="MatrixElementCache::precalculateDiamagnetism">
+<area shape="rect" id="node2" href="$classsqlite_1_1statement.html#a1b5e34a58010723e10ee31c4d02f7f55" title="Bind a value to a position in the query. " alt="" coords="279,5,446,32"/>
+<area shape="rect" id="node3" href="$classsqlite_1_1statement.html#add6b491603e9505c82779ad762f72888" title="Execute SQLite statements. " alt="" coords="278,56,447,83"/>
+<area shape="rect" id="node4" href="$classsqlite_1_1statement.html#a881b89458af4ea9bde7a80e416f53903" title="Get value of a field. " alt="" coords="283,107,443,133"/>
+<area shape="rect" id="node5" href="$namespaceutils.html#a1ba9020d51335d2ddd62e877803e9e31" title="utils::get_pid" alt="" coords="311,157,414,184"/>
+<area shape="rect" id="node6" href="$classsqlite_1_1statement.html#a1b40871fb975892f70ea097f7c6da9c1" title="Prepare the statement. " alt="" coords="293,209,432,250"/>
+<area shape="rect" id="node7" href="$classsqlite_1_1statement.html#a4feb0002bd8daa77fffef99c0f838f1c" title="Reset the statement. " alt="" coords="293,274,432,315"/>
+<area shape="rect" id="node8" href="$MatrixElementCache_8cpp.html#a15aabd3025cfa0ca9485cd672c0a1a4a" title="selectionRulesMomentumNew" alt="" coords="256,340,469,367"/>
+<area shape="rect" id="node9" href="$MatrixElementCache_8cpp.html#a06a268e07e2a0edb3fca096b8c941c78" title="selectionRulesMultipoleNew" alt="" coords="265,391,461,417"/>
+<area shape="rect" id="node10" href="$classsqlite_1_1statement.html#aa68ea5317f4837f045502038d0682533" title="Set the query string. " alt="" coords="283,441,442,468"/>
+<area shape="rect" id="node11" href="$classsqlite_1_1statement.html#a0ef0c0c1fd66918b9a9c6167fd2e668f" title="Step the statement. " alt="" coords="279,492,446,519"/>
+</map>
