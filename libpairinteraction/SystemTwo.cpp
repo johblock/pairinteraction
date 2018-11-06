@@ -19,6 +19,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <complex>
 #include <limits>
 #include <numeric>
 #include <string>
@@ -62,6 +63,21 @@ void SystemTwo::setDistance(double d) {
     this->onParameterChange();
     distance = d;
 }
+
+void SystemTwo::setDistanceX(double x) {
+    this->onParameterChange();
+    xsystem = x;
+}
+
+void SystemTwo::setDistanceZA(double z) {
+    this->onParameterChange();
+    zA = z;
+}
+void SystemTwo::setDistanceZB(double z) {
+    this->onParameterChange();
+    zB = z;
+}
+
 
 void SystemTwo::setAngle(double a) {
     if (a != 0 && ordermax > 3) {
@@ -375,7 +391,7 @@ void SystemTwo::initializeBasis() {
     removeRestrictedStates([=](const enumerated_state<StateTwo> &entry) -> bool {
         return sqnorm_list[entry.idx] > 0.05;
     });
-
+    // TODO CHECK Here for LeRoy-radius of largest quantum numbers
     /*////////////////////////////////////////////////////////////////////
     /// Sort states ////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////
@@ -461,7 +477,10 @@ void SystemTwo::initializeInteraction() {
         interaction_angulardipole_triplets; // TODO reserve
     std::unordered_map<int, std::vector<eigen_triplet_t>>
         interaction_multipole_triplets; // TODO reserve
-
+    //create GreenTensor before looping
+    if(GreenTensor==True){
+      SystemTwo::GreenTensor();
+    }
     // Loop over column entries
     for (const auto &c : states) { // TODO parallelization
         if (c.state.species.empty()) {
@@ -531,8 +550,12 @@ void SystemTwo::initializeInteraction() {
                     }
                 }
 
-            } else {
-
+            } 
+            else if(Green-Tensor == True /* obviously pseudo-code*/){
+		//Call DipoleVector to create interaction as \vec{d}_{r1c1} \cdot G \cdot \vec{d}_{r2c2}
+		SystemTwo::DipoleVector();
+	    }
+            else {
                 // Multipole interaction
                 if (q1 + q2 == 0) { // total momentum conserved
                     for (const auto &order : orange) {
@@ -559,7 +582,8 @@ void SystemTwo::initializeInteraction() {
                         this->addTriplet(interaction_multipole_triplets[order], r.idx, c.idx, val);
                     }
                 }
-            }
+            }	    
+	    
         }
     }
 
@@ -619,6 +643,105 @@ void SystemTwo::addInteraction() {
             hamiltonianmatrix += interaction_multipole[order] * powerlaw;
         }
     }
+}
+
+////////////////////////////////////////////////////////////////////
+/// Method that allows base class to construct Hamiltonian using GreenTensor /////////
+////////////////////////////////////////////////////////////////////
+
+void SystemTwo::GreenTensor() {
+   //GreenTensor nur einmal für gegebenes x, zA, zB erstellen, dann alle Matrixelemente durchrechnen (siehe unten).
+    if (distance == std::numeric_limits<double>::max()) {
+        return;
+    }
+    const   complex<double> imagunit(0.0,1.0);    
+    const double pi = 2.*asin(1.);
+    
+    //Construct GreenTensor
+    eigen_dense_t greentensor0[3][3];
+    eigen_dense_t greentensor_plate[3][3];
+    
+    // vecrho => Symmetrien ausnutzen abhängig von Problemen? Also z.B. hier neu definieren: x = sqrt(x^2+y^2), y = 0? Würde Rechenleistung sparen!
+    //Benötige trotzdem 3 Koordinaten: x=xA-xB, zA, zB erforderlich! Nur diese eingeben für dieses Setup. 
+    
+    double vecrho[3];
+    vecrho[0] = x;
+    vecrho[1] = 0.;
+    vecrho[2] = zA-zB;
+    distance = vecrho.norm();
+    vecrho = vecrho.normalized(); 
+    for(int i=0;i<3;i++){
+      for(int j=0;j<3;j++){
+	double Kdelta = 0.;
+	if(i==j){
+	  Kdelta = 1.;
+	}
+	greentensor0[i][j] = (Kdelta - 3.*vecrho[i]*vecrho[j])/std::pow(distance,3.);
+      }
+    }
+    
+    
+    double zp = zA + zB;
+    double rp = std::sqrt(x*x+zp*zp); //r_+ = sqrt(x^2 + zp^2)
+    double greentensor_plate[3][3];
+    for(int i =0;i<3;i++){
+      for(int j = 0;j<3;j++){
+	greentensor_plate[i][j] = 0.;
+      }
+    }
+    greentensor_plate[0][0] = (1. - (3.*x*x)/(rp*rp))*std::pow(rp,-3.);
+    greentensor_plate[0][2] =  ((3.*x*zp)/(rp*rp))*std::pow(rp,-3.);
+    greentensor_plate[1][1] = 1.*std::pow(rp,-3.);
+    greentensor_plate[2][0] = (- 3.*x*zp/(rp*rp))*std::pow(rp,-3.);
+    greentensor_plate[2][2] = (2. - 3.*x*x/(rp*rp))*std::pow(rp,-3.);   
+}
+
+void SystemTwo::DipoleVector{
+    //Dipolvektor
+    //cache.getElectricMultipole(r.state.first(), c.state.first(),kappa1)
+    std::complex<double> dipolevec1[3];
+    std::complex<double> dipolevec2[3];
+    dipolemoment1 = coulombs_constant*cache.getElectricDipole(r.state.first(), c.state.first());
+    dipolemoment2 = coulombs_constant*cache.getElectricDipole(r.state.second(), c.state.second());
+    if(r.state.first().m - c.state.first().m == -1.){
+      dipolevec1[0] = std::sqrt(1./2.)*(-dipolemoment1);
+      dipolevec1[1] = std::sqrt(1./2.)*imagunit*dipolemoment1;
+      dipolevec1[2] = 0.;
+    }
+    if(r.state.first().m - c.state.first().m == 0.){
+      dipolevec1[0] = 0.;
+      dipolevec1[1] = 0.;
+      dipolevec1[2] = std::sqrt(1.)*dipolemoment1;
+    }
+    if(r.state.first().m - c.state.first().m == 1.){
+      dipolevec1[0] = std::sqrt(1./2.)*dipolemoment1;
+      dipolevec1[1] = std::sqrt(1./2.)*imagunit*dipolemoment1;
+      dipolevec1[2] = 0.;
+    }
+    if(r.state.second().m - c.state.second().m == -1.){
+      dipolevec2[0] = std::sqrt(1./2.)*(-dipolemoment2);
+      dipolevec2[1] = std::sqrt(1./2.)*imagunit*(dipolemoment2);
+      dipolevec2[2] = 0.;
+    }
+    if(r.state.second().m - c.state.second().m == 0.){
+      dipolevec2[0] = 0.;
+      dipolevec2[1] = 0.;
+      dipolevec2[2] = std::sqrt(1.)*dipolemoment2;
+    }
+    if(r.state.second().m - c.state.second().m == 1.){
+      dipolevec2[0] = std::sqrt(1./2.)*dipolemoment2;
+      dipolevec2[1] = std::sqrt(1./2.)*imagunit*dipolemoment2;
+      dipolevec2[2] = 0.;
+    }
+    
+    for(int i=0;i<3;i++){
+      for(int j=0;j<3;j++){
+	hamiltonianmatrixelement += dipolevec1[i]*(greentensor0[i][j]+greentensor_plate[i][j])*dipolevec2[j];
+      }
+    }
+    //hamiltonianmatrixelement ist jetzt ein Element der Matrix <r1r2|\hat{H}_{dipol-dipol}|c1c2> --> wie komplette Matrix abspeichern? 
+    //hamiltonianmatrix = hamiltonianmatrixelement; //Wird hamiltonianmatrix von SystemBase.h so als Eintrag für r.idx(),c.idx() gelesen? Laut Mail vom 06.11.: Nein!
+    
 }
 
 ////////////////////////////////////////////////////////////////////
