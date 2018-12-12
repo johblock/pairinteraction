@@ -489,18 +489,8 @@ void SystemTwo::initializeInteraction() {
         
         
     if(GTbool){
-//       GreenTensor GT(x,zA,zB);
-//       double AnzahlStates = system1.getNumStates() * system2.getNumStates(); //TODO: correct? Move to front. Assumes that Hamiltonian matrix will be of size NumStates*NumStates (or r.idx,c.idx<=NumStates)
-//       std::cout<<"Anzahl = "<<AnzahlStates<<std::endl;
-// 		//Call DipoleVector to create interaction as \vec{d}_{r1c1} \cdot G \cdot \vec{d}_{r2c2}
-// // 		SystemTwo::DipoleVector();
-        //Alle Definitionen in SystemTwo.h geschoben
-//       std::vector<eigen_triplet_complex_t> xxGTmatrix;
-//       std::vector<eigen_triplet_complex_t> yyGTmatrix;
-//       std::vector<eigen_triplet_complex_t> zzGTmatrix;
-//       std::vector<eigen_triplet_complex_t> xzGTmatrix;
-//       std::vector<eigen_triplet_complex_t> zxGTmatrix;
-//       std::vector<eigen_triplet_complex_t> GTmatrix;
+        //matrix definitions in SystemTwo.h
+
       double dipolemoment1,dipolemoment2;
       std::complex<double> imagunit = std::complex<double> (0.,1.);
       std::complex<double> vec1[3];
@@ -728,17 +718,6 @@ void SystemTwo::addInteraction() {
       dummy.setFromTriplets(zxGTmatrix.begin(),zxGTmatrix.end());
       dummy = dummy*GT.tensor(2,0);
       GThamiltonian += dummy;
-        //hamiltonianmatrix = xxGTmatrix + yyGTmatrix + zzGTmatrix + xzGTmatrix + zxGTmatrix; //Funktioniert das mit den Triplets?
-//       for(const auto &c : states){
-// 	for(const auto &r : states){
-// 	  for(int i = 0;i<3;i++{
-// 	    for(int j = 0;j<3;j++){
-// 	      hamiltonianmatrix[r.idx,c.idx] += dipolematrix[r.idx,c.idx,i,j]*(Gtensor.vac(i,j)+Gtensor.plate(i,j));
-// 	    }
-// 	  }
-// 	  
-// 	}
-//       }
     }
 
 
@@ -769,25 +748,7 @@ void SystemTwo::addInteraction() {
 
 
 void SystemTwo::DipoleVector(){
-    //not sure if needed, or if it should be implemented in an other way. (dipolevector.h & dipolevector.cpp for example)
-//     //Dipolvektor
-//     //cache.getElectricMultipole(r.state.first(), c.state.first(),kappa1)
-    
-//     
-//     void fillDipole(double m, double mp){ 
-//         //Hier r.state.first/second und c.state.first/second als Argument?
-// //       double dipolemoment = 2; //Dementsprechend gewinnen
-// //       std::complex<double> dipole[3];
-// // //       //   dipolemoment = coulombs_constant*cache.getElectricDipole(r.state, c.state);
-// //       std::complex<double> imagunit = std::complex<double> (0.,1.);
-// //       if(m - mp == -1.){
-// // 	dipole[0] = (std::sqrt(1./2.)*(-dipolemoment));
-// // 	dipole[1] = (std::sqrt(1./2.)*imagunit*dipolemoment);
-// // 	dipole[2] = 0.;
-// //       }
-
-//     }
-//     
+    //just empty, everything moved to other place. Leave it as place holder for now.
     
 }
 
