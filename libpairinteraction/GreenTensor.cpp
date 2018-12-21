@@ -47,6 +47,9 @@ void GreenTensor::plate(double x, double zA, double zB) {
     tensor(2, 0) += (-3. * x * zp / (rp * rp)) * std::pow(rp, -3.);
     tensor(2, 2) += (2. - 3. * x * x / (rp * rp)) * std::pow(rp, -3.);
 }
+
+
+
 GreenTensor::GreenTensor(double x, double z) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
